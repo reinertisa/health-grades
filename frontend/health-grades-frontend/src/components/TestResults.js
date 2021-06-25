@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import useFetch from '../services/useFetch';
+import useFetch from '../hooks/useFetch';
 import { Bar } from 'react-chartjs-2';
 
 const TestResults = () => {
@@ -12,7 +12,7 @@ const TestResults = () => {
     
     return (
         <div className="dashboard">
-            <h1>Dashboard Component</h1>
+            <h1>Test Results</h1>
             {!isPending && <Bar
                 data={{
                     labels: Object.keys(testResults.testResult),

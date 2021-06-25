@@ -4,6 +4,7 @@ import Register from './components/Register';
 import Symptoms from './components/Symptoms';
 import Dataset from './components/Dataset';
 import TestResults from './components/TestResults';
+import Patient from './components/Patient';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
             </Route>
             <Route exact path="/dataset">
               <Dataset />
+            </Route>
+            <Route exact path="/patient">
+              <Patient />
             </Route>
           </Switch>
         </div>

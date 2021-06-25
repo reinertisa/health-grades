@@ -1,15 +1,12 @@
 import DatasetModal from './DatasetModal';
 import { useState } from 'react';
-import useFetch from '../services/useFetch';
+import useFetch from '../hooks/useFetch';
 
 const Dataset = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const { data: dataset, isPending, Error } = useFetch('http://localhost:8080/api/dataset');
-
-    console.log("dataset", dataset);
-
-
+    
     return (
         <>
             <div className="dataset">

@@ -15,7 +15,11 @@ const Register = () => {
         
         const response = await axios.post('http://localhost:8080/api/user', {
             firstName, lastName, email, age
-        });
+        }).then(res => {
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
 
         history.push('/symptoms')
         console.log(response);
